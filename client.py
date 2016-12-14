@@ -4,12 +4,15 @@
 # Client Code
 
 import socket
+import sys
+
+arguments = sys.argv
 
 if __name__ == "__main__":
 
 	# Connection Information
-	host = '127.0.0.1'
-	port = 8080
+	host = arguments[1]
+	port = int(arguments[2])
 
 	# Creating the connection
 	socketObject = socket.socket()

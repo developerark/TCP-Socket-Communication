@@ -4,6 +4,9 @@
 # Server Code
 
 import socket
+import sys
+
+arguments = sys.argv
 
 # This function can be used to process the data received from the client the way you like to. Pseudo Method
 def processData(data):
@@ -12,8 +15,8 @@ def processData(data):
 if __name__ == '__main__':
 	
 	# Connection Informations
-	host = '127.0.0.1'
-	port = 8080
+	host = arguments[1]
+	port = int(arguments[2])
 
 	# Creating the connection. 
 	socketObject = socket.socket()
